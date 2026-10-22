@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sai Susanth Reddy Penumalli – AI & Full-Stack Developer</title>
+<meta name="description" content="Portfolio of Sai Susanth Reddy Penumalli: full-stack applications, REST APIs, RAG pipelines and deep learning. B.Tech CSE (AI/ML), SRM Institute of Science and Technology.">
+<meta name="theme-color" content="#0a8576">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f9fb; --surface:#ffffff; --ink:#0f172a; --muted:#475569; --line:#d8e2ea;
+  --accent:#0a8576; --a2:#1d63d8; --a3:#4338ca; --grad:linear-gradient(110deg,var(--accent),var(--a2) 55%,var(--a3)); --accent-ink:#ffffff; --hi:#fcd34d; --code-bg:#0b1b2b; --code-ink:#dbe4ff; --ok:#5ee6a8;
+  --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
+  --body:"Instrument Sans","Segoe UI",system-ui,sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,Consolas,monospace;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#08111c;--surface:#0f1b2b;--ink:#eaf2fa;--muted:#9fb0c3;--line:#1f3147;--accent:#2dd4bf;--a2:#60a5fa;--a3:#a5b4fc;--accent-ink:#08111c;--hi:#fcd34d;--code-bg:#050c14;}
+}
+:root[data-theme="dark"]{--bg:#08111c;--surface:#0f1b2b;--ink:#eaf2fa;--muted:#9fb0c3;--line:#1f3147;--accent:#2dd4bf;--a2:#60a5fa;--a3:#a5b4fc;--accent-ink:#08111c;--code-bg:#050c14;}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--body);overflow-x:hidden}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;height:56px}
+header b{font:700 18px var(--head)}
+nav{display:flex;gap:22px;font-size:15px}
+nav a{text-decoration:none;color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding:72px 0 64px}
+h1{font:800 clamp(40px,7vw,76px)/1.0 var(--head);letter-spacing:-.03em;margin:0 0 20px}
+.role{font:500 22px/1.3 var(--head);margin:0 0 16px}
+.lead{color:var(--muted);max-width:52ch;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:11px 20px;border-radius:8px;font-weight:600;text-decoration:none;border:2px solid var(--ink)}
+.btn.p{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:hover{background:var(--hi);border-color:var(--hi);color:#111827}
+.tx{background:var(--code-bg);color:var(--code-ink);border-radius:14px;padding:20px;font:400 14px/1.75 var(--mono);box-shadow:8px 8px 0 var(--accent)}
+.tx .top{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:12px;color:#8e9bc4}
+.tx button{font:600 13px var(--body);background:var(--hi);color:#111827;border:0;border-radius:6px;padding:6px 12px;cursor:pointer}
+.tx ol{list-style:none;margin:0;padding:0}
+.tx li{opacity:.35;transition:opacity .25s;white-space:pre-wrap;overflow-wrap:anywhere}
+.tx li.on{opacity:1}
+.tx .res{margin-top:10px;color:var(--ok);min-height:1.75em}
+.tx .k{color:#9db0ff}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 32px/1.1 var(--head);letter-spacing:-.02em;margin:0 0 28px}
+.about{max-width:68ch;font-size:19px}
+.proj{display:grid;grid-template-columns:200px 1fr;gap:12px 40px;padding:28px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj h3{font:700 24px/1.2 var(--head);margin:0 0 4px}
+.date{color:var(--muted);font-size:15px}
+.proj ul{margin:12px 0;padding-left:20px}
+.proj li{margin-bottom:6px;max-width:70ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0;padding:0;list-style:none}
+.chips li{background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:3px 12px;font-size:14px;margin:0}
+.metrics{display:flex;flex-wrap:wrap;gap:12px;margin-top:12px}
+.metrics span{background:var(--hi);color:#111827;font-weight:600;padding:4px 12px;border-radius:6px;font-size:15px}
+dl{margin:0;display:grid;grid-template-columns:200px 1fr;gap:0 40px}
+dt{font-weight:600;padding:14px 0;border-top:1px solid var(--line)}
+dd{margin:0;padding:14px 0;border-top:1px solid var(--line);color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.two h3{font:700 20px var(--head);margin:0 0 12px}
+.two ul{margin:0;padding-left:20px}
+.two li{margin-bottom:8px}
+.edu div{display:grid;grid-template-columns:1fr auto;gap:4px 24px;padding:14px 0;border-top:1px solid var(--line)}
+.edu small{color:var(--muted);font-size:15px}
+.edu .r{text-align:right}
+.contact p{max-width:52ch;color:var(--muted);margin:0 0 24px}
+footer{padding:28px 0 40px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+@media (max-width:820px){
+  .hero,.two{grid-template-columns:1fr}
+  .proj,dl{grid-template-columns:1fr}
+  dt{padding-bottom:0;border-bottom:0}
+  dd{border-top:0;padding-top:4px}
+  nav{gap:14px;font-size:14px}
+  header b{display:none}
+}
+#bar{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:3px;width:100%;background:var(--grad);transform:scaleX(0);transform-origin:0 50%;z-index:11}
+.hero{position:relative}
+.aurora{position:absolute;top:-60px;bottom:0;left:50%;width:100vw;transform:translateX(-50%);z-index:-1;pointer-events:none;overflow:hidden;-webkit-mask-image:linear-gradient(#000 55%,transparent);mask-image:linear-gradient(#000 55%,transparent)}
+.aurora i{position:absolute;border-radius:50%;filter:blur(90px);opacity:.4;animation:drift 16s ease-in-out infinite alternate}
+.aurora i:nth-child(1){width:440px;height:440px;background:var(--accent);top:-60px;left:4%}
+.aurora i:nth-child(2){width:380px;height:380px;background:var(--a2);top:60px;right:6%;animation-delay:-6s}
+.aurora i:nth-child(3){width:340px;height:340px;background:var(--a3);bottom:-80px;left:42%;animation-delay:-11s}
+@keyframes drift{to{transform:translate(70px,50px) scale(1.25)}}
+h1{background:linear-gradient(110deg,var(--accent),var(--a2),var(--a3));background-size:220% auto;-webkit-background-clip:text;background-clip:text;color:transparent}
+@keyframes flow{to{background-position:100% center}}
+@keyframes up{to{opacity:1;transform:none}}
+.in{opacity:0;transform:translateY(30px);animation:up .9s cubic-bezier(.2,.7,.2,1) forwards;animation-delay:calc(var(--d,0)*130ms)}
+h1.in{animation:up .9s cubic-bezier(.2,.7,.2,1) forwards,flow 6s ease-in-out infinite alternate;animation-delay:0s,0s}
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.show{opacity:1;transform:none}
+h2{position:relative;display:inline-block}
+h2::after{content:"";position:absolute;left:0;bottom:-10px;height:4px;width:0;background:var(--grad);border-radius:2px;transition:width 1s .3s cubic-bezier(.2,.7,.2,1)}
+.show h2::after,h2.show::after{width:100%}
+.btn{transition:transform .25s,box-shadow .25s,background-color .25s,filter .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn.p{background:var(--grad);border-color:transparent}
+.btn.p:hover{background:var(--grad);filter:brightness(1.15);color:var(--accent-ink);box-shadow:0 12px 26px -10px var(--accent)}
+nav a{transition:color .2s}
+nav a.act{color:var(--ink);text-decoration:underline;text-decoration-color:var(--a2);text-decoration-thickness:2px;text-underline-offset:8px}
+.tx{box-shadow:8px 8px 0 var(--a3)}
+.tx li{transition:opacity .3s,transform .3s}
+.tx li.on{transform:translateX(8px)}
+.proj{padding-left:16px;padding-right:16px;margin:0 -16px;border-radius:12px}
+.proj.rv{transition:opacity .9s,transform .9s cubic-bezier(.2,.7,.2,1),background .3s,box-shadow .3s}
+.proj:hover{background:var(--surface);box-shadow:inset 4px 0 0 var(--a2)}
+.chips li{transition:transform .2s,background .2s,color .2s,border-color .2s}
+.chips li:hover{transform:translateY(-4px) rotate(-2deg);background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.metrics span{background:var(--grad);color:var(--accent-ink)}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.links a{font-weight:600;font-size:15px;text-decoration:none;border:2px solid var(--line);border-radius:8px;padding:6px 16px;transition:transform .2s,background .2s,color .2s,border-color .2s}
+.links a:hover{transform:translateY(-3px);background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.two a{color:var(--accent);font-weight:600}
+dt{transition:color .3s}
+dt:hover{color:var(--a2)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.in,.rv{opacity:1;transform:none}h1{background:none;color:var(--ink)}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="bar" aria-hidden="true"></div>
+<header><div class="wrap"><b>Sai Susanth</b>
+<nav aria-label="Sections"><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#achievements">Achievements</a><a href="#education">Education</a><a href="#contact">Contact</a></nav></div></header>
+
+<main class="wrap">
+<div class="hero"><div class="aurora" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div>
+    <h1 class="in">Sai Susanth Reddy Penumalli</h1>
+    <p class="role in" style="--d:1">AI & full-stack developer</p>
+    <p class="lead in" style="--d:2">I’m a computer science undergraduate who builds REST APIs, secure sign-in flows, and database-backed apps with React, Node.js and PostgreSQL, plus RAG and deep-learning models in Python.</p>
+    <div class="btns in" style="--d:3"><a class="btn p" href="#projects">See my projects</a><a class="btn" href="mailto:p.saisusanth@gmail.com">Email me</a></div>
+  </div>
+  <div class="tx in" style="--d:3" aria-label="Example of the claim approval transaction from the Lost & Found Portal">
+    <div class="top"><span>Lost & Found Portal: approve a claim</span><button id="run" type="button">Run</button></div>
+    <ol id="steps">
+      <li><span class="k">BEGIN</span>;</li>
+      <li><span class="k">UPDATE</span> claims → <span class="k">'accepted'</span></li>
+      <li><span class="k">UPDATE</span> competing claims → <span class="k">'rejected'</span></li>
+      <li><span class="k">UPDATE</span> items → <span class="k">'returned'</span></li>
+      <li><span class="k">COMMIT</span>;</li>
+    </ol>
+    <div class="res" id="res" aria-live="polite"></div>
+  </div>
+</div>
+
+<section id="about" class="rv"><h2>About</h2>
+<p class="about">I build full-stack applications with secure authentication and reliable data handling, and I’ve implemented a document-based RAG pipeline with LangChain, Qdrant, LlamaParse and Gemini. I also co-authored a CNN–BiLSTM model for dissolved oxygen prediction. I’m looking for software development engineer roles, with a solid base in data structures, algorithms, OOP and core CS.</p></section>
+
+<section id="projects"><h2 class="rv">Projects</h2>
+<article class="proj rv"><div><h3>Lost & Found Portal</h3><div class="date">Jul 2026 – Aug 2026</div></div>
+<div><ul>
+<li>Built and deployed a React and Express app on Railway for reporting lost items, searching listings, uploading images and submitting ownership claims, backed by PostgreSQL.</li>
+<li>Designed relational tables and REST endpoints for users, items, images and claims, using parameterized SQL queries, joins, filtering and pagination.</li>
+<li>Secured endpoints with Firebase/Google authentication, JWT-based HttpOnly sessions, role-based authorization and ownership validation.</li>
+<li>Made claim approval transactional: accepting a claim, rejecting competing requests and updating item status happen as one atomic operation.</li></ul>
+<ul class="chips"><li>React</li><li>Express</li><li>PostgreSQL</li><li>Firebase Auth</li><li>JWT</li><li>Railway</li></ul><div class="links"><a href="https://github.com/susanth901/lost-and-found-portal" target="_blank" rel="noopener">GitHub</a></div></div></article>
+
+<article class="proj rv"><div><h3>Study Abroad Advisory Chatbot</h3><div class="date">Jan 2026 – Mar 2026</div></div>
+<div><ul>
+<li>Built the ingestion pipeline with LlamaParse and LangChain to extract institutional PDF content, split it into chunks and prepare it for retrieval.</li>
+<li>Generated multilingual embeddings and indexed the chunks in Qdrant for semantic search across university program and cost information.</li>
+<li>Implemented the Qdrant retrieval and Gemini response workflow with LangChain, grounding answers in the relevant document context.</li></ul>
+<ul class="chips"><li>LangChain</li><li>LlamaParse</li><li>Qdrant</li><li>Gemini</li><li>RAG</li></ul><div class="links"><a href="https://github.com/susanth901/SAP-Student-abroad-program-SRM-_CHATBOT_AGENT" target="_blank" rel="noopener">GitHub</a></div></div></article>
+
+<article class="proj rv"><div><h3>Aquaculture Dissolved Oxygen Prediction</h3><div class="date">Jan 2026 – Mar 2026</div></div>
+<div><ul>
+<li>Built a Python preprocessing pipeline for missing values, normalization and time-series sequence preparation from multivariate water-quality data.</li>
+<li>Trained a CNN–BiLSTM model in TensorFlow and Keras that beat an LSTM baseline, combining convolutional feature extraction with bidirectional temporal modeling.</li>
+<li>Co-authored the paper, accepted at ICRET 2026.</li></ul>
+<div class="metrics"><span>RMSE −<b data-to="9.0">9.0</b>%</span><span>MAE −<b data-to="10.8">10.8</b>%</span><span>R² 0.7454 → <b data-from="0.7454" data-to="0.7894" data-d="4">0.7894</b></span></div>
+<ul class="chips"><li>Python</li><li>TensorFlow</li><li>Keras</li><li>Time series</li></ul><div class="links"><a href="https://github.com/susanth901/CNN-BILSTM-BASED-DO-PREDICTION" target="_blank" rel="noopener">GitHub</a><a href="https://drive.google.com/file/d/1s0B_yV7i6BoxrbN8CRp5erewH0dNzn-E/view" target="_blank" rel="noopener">Paper</a></div></div></article>
+</section>
+
+<section id="skills" class="rv"><h2>Skills</h2>
+<dl>
+<dt>Languages</dt><dd>Python, Java, C++, C, SQL, JavaScript</dd>
+<dt>Frontend & backend</dt><dd>React.js, Node.js, Express.js, FastAPI, Flask, REST APIs, HTML, CSS</dd>
+<dt>Machine learning & AI</dt><dd>PyTorch, TensorFlow, Keras, Scikit-Learn, Transformers, LLMs, RAG, Prompt Engineering, LangChain, LlamaParse</dd>
+<dt>Cloud & DevOps</dt><dd>Docker, Kubernetes, AWS, Kafka, GitHub Actions, Git</dd>
+<dt>Databases</dt><dd>PostgreSQL, MySQL, Qdrant</dd>
+<dt>Core CS</dt><dd>Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks, SDLC</dd>
+</dl></section>
+
+<section id="achievements" class="rv"><h2>Achievements & certifications</h2>
+<div class="two">
+<div><h3>Achievements</h3><ul>
+<li>Top 15 at the Guidewire DEVTrails 2026 Hackathon (<a href="https://drive.google.com/file/d/1a2chBxggXbMyAYSDLhDl9oKcc5dijxZu/view" target="_blank" rel="noopener">certificate</a>)</li>
+<li>Paper on CNN–BiLSTM dissolved oxygen prediction accepted at ICRET 2026</li></ul></div>
+<div><h3>Certifications</h3><ul>
+<li>AWS Certified Cloud Practitioner, AWS (<a href="https://drive.google.com/file/d/1f5iBtIOMngYTwVav3IbjVYhyFrkXM4pv/view?usp=drive_link" target="_blank" rel="noopener">certificate</a>)</li>
+<li>Oracle AI Foundations Professional, Oracle (<a href="https://drive.google.com/file/d/1jXszbZGNfss8j1dJLrQLRwOHlBnOkpff/view" target="_blank" rel="noopener">certificate</a>)</li>
+<li>Oracle Generative AI Professional, Oracle (<a href="https://drive.google.com/file/d/1dMNdyQdOykXkOQCH6pacyWKunPYv2XlK/view" target="_blank" rel="noopener">certificate</a>)</li></ul></div>
+</div></section>
+
+<section id="education" class="edu rv"><h2>Education</h2>
+<div><strong>SRM Institute of Science and Technology</strong><span class="r">Aug 2023 – May 2027</span>
+<small>B.Tech in Computer Science and Engineering, specialization in AI & ML</small><small class="r">CGPA 8.92/10</small></div>
+<div><strong>Narayana College, Andhra Pradesh Board</strong><span class="r">2023</span>
+<small>Class XII, MPC</small><small class="r">86.8%</small></div>
+<div><strong>Narayana High School</strong><span class="r">2021</span>
+<small>Class X</small><small class="r">99.5%</small></div>
+</section>
+
+<section id="contact" class="contact rv"><h2>Contact</h2>
+<p>I’m open to SDE roles and internships. Email is the fastest way to reach me.</p>
+<div class="btns"><a class="btn p" href="mailto:p.saisusanth@gmail.com">p.saisusanth@gmail.com</a><a class="btn" href="tel:+919014625106">+91 90146 25106</a><a class="btn" href="https://www.linkedin.com/in/sai-susanth-reddy-penumalli-74a52128a/" target="_blank" rel="noopener">LinkedIn</a><a class="btn" href="https://github.com/susanth901" target="_blank" rel="noopener">GitHub</a></div></section>
+</main>
+<footer><div class="wrap">© 2026 Sai Susanth Reddy Penumalli</div></footer>
+
+<script>
+(function(){
+  var reduce=matchMedia('(prefers-reduced-motion:reduce)').matches,bar=document.getElementById('bar');
+  function prog(){var h=document.documentElement.scrollHeight-innerHeight;bar.style.transform='scaleX('+(h>0?Math.min(scrollY/h,1):0)+')';}
+  addEventListener('scroll',prog,{passive:true});prog();
+  function count(el){if(reduce)return;var to=+el.dataset.to,from=+(el.dataset.from||0),d=+(el.dataset.d||1),t0=performance.now();(function s(t){var p=Math.min((t-t0)/1300,1),e=1-Math.pow(1-p,3);el.textContent=(from+(to-from)*e).toFixed(d);if(p<1)requestAnimationFrame(s);})(t0);}
+  var rv=document.querySelectorAll('.rv');
+  if(!('IntersectionObserver' in window)){rv.forEach(function(x){x.classList.add('show')});}
+  else{
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('show');e.target.querySelectorAll('[data-to]').forEach(count);io.unobserve(e.target);}});},{threshold:.12});
+    rv.forEach(function(x){io.observe(x)});
+    var links={};document.querySelectorAll('nav a').forEach(function(a){links[a.getAttribute('href').slice(1)]=a;});
+    var so=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){for(var k in links)links[k].classList.remove('act');if(links[e.target.id])links[e.target.id].classList.add('act');}});},{rootMargin:'-45% 0px -50% 0px'});
+    document.querySelectorAll('main section[id]').forEach(function(s){so.observe(s)});
+  }
+})();
+(function(){
+  var run=document.getElementById('run'),res=document.getElementById('res'),
+      li=document.querySelectorAll('#steps li'),busy=false;
+  function reset(){li.forEach(function(x){x.classList.remove('on')});res.textContent='';}
+  run.addEventListener('click',function(){
+    if(busy)return; busy=true; reset(); var i=0;
+    (function next(){
+      if(i<li.length){li[i++].classList.add('on');setTimeout(next,450);}
+      else{res.textContent='Committed: 1 accepted, competing claims rejected, item updated.';busy=false;}
+    })();
+  });
+})();
+</script>
+</body>
+</html>
